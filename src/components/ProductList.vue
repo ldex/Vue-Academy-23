@@ -19,11 +19,15 @@
         }"
         @click="onSelect(product)"
       >
-        <span class="name">{{ product.name }}</span>
-        <span class="description">{{ product.description }}</span>
-        <span class="price">{{ product.price }}</span>
+          <slot :product="product">
+            {{ product.name }} -  {{ product.description }}
+          </slot>
       </li>
     </ul>
+
+    <div class="right">
+      <router-link to="/product/insert">Create new product...</router-link>
+    </div>
 
     <button @click="prevPage" :disabled="pageNumber === 1">
       &lt; Previous
@@ -36,7 +40,6 @@
 </template>
 
 <script>
-
 export default {
   props: {
     products: {
