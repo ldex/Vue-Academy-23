@@ -56,7 +56,7 @@ export default {
     this.fetchProduct(this.id);
   },
   methods: {
-    ...mapActions(["fetchProduct","deleteProduct"]), // map `this.fetchProduct(this.id)` to `this.$store.dispatch('fetchProduct', this.id)`
+    ...mapActions(["fetchProduct","deleteProduct"]),
     deleteWithConfirm() {
       if(window.confirm('Are you sure ?')) {
         this.deleteProduct(this.product)

@@ -1,8 +1,8 @@
 <template>
 <div>
-    <h1>
+    <h2>
     Error!
-    </h1>
+    </h2>
     <p>
         {{ message }}
     </p>
